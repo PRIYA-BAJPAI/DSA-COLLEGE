@@ -1,6 +1,7 @@
 #include<stdio.h>
  int main(){
     int n;
+    int num=64;
     printf("input no of rows=");
     scanf("%d",&n);
     for (int i=0;i<n;i++){
