@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char str[]="hola";
+    int l=strlen(str);
+    for(int i=l-1;i>=0;i--){
+        printf("%c",str[i]);
+    }
+    return 0;
+}
