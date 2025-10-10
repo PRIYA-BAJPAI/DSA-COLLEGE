@@ -1,19 +1,24 @@
 #include<stdio.h>
 #include<string.h>
 int main(){
-    char arr[]="hello";
-    int n=strlen(arr); 
+    char str[]="akashganga";
+    int n=strlen(str); 
     int freq[256]={0};
-    int i;
+    int i,count;
     for( i=0;i<n;i++){
-        freq[(unsigned char)arr[i]]++;
-    }
-    for( i=0;i<256;i++){
-        if(freq[i]>0){
-            char arr=arr-i;
-        printf("%c%d",i,freq[i]);
+        if(freq[str[i]]==0){
+            count=1;
+            for(int j=i+1;j<n;j++){
+                if(str[i]==str[j]){
+                    count++;
+                }
+            }
+            printf("%c%d",str[i],count);
+            freq[str[i]]=1;//marked visited
         }
+        
+    
     }
     return 0;
     
-}//sudharna hai
+}
