@@ -3,8 +3,10 @@ int main(){
     int arr[5]={4,3,0,6,2};
     int leftmax[5];
     int rightmax[5];
-    for(int i=0;i<5;i++){
-        if(arr[i]>arr[i-1]){
+    leftmax[0]=arr[0];
+    rightmax[0]=arr[0];
+    for(int i=1;i<5;i++){
+        if(arr[i]>leftmax[i-1]){
             leftmax[i]=arr[i];
         }else{
             leftmax[i]=leftmax[i-1];
@@ -12,7 +14,7 @@ int main(){
         if(arr[i]>arr[i+1]){
             rightmax[i]=arr[i];
         }else{
-            leftmax[i]=leftmax[i-1];
+            rightmax[i]=rightmax[i-1];
         }
     }
     int ans=0;
