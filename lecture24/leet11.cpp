@@ -21,7 +21,7 @@ int main(){
             i++;
         }else{
             j--;
-        }
+        } 
     }
     printf("%d",maxarea);
 }
