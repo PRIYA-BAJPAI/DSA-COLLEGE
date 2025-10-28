@@ -1,20 +1,30 @@
 #include<stdio.h>
 #include<string.h>
 int main(){
-    char str[]="mamd";
-    int istrue=1;
+    char str[]="abcdef";
+    int istrue;
     int l=strlen(str);
-    int n=l-1;
-    for(int i=0;i<n/2;i++){
-        if(str[i]!=str[n-i-1]){
+    int found=0;
+    while(l>0){
+      istrue=1;
+      for(int i=0;i<l/2;i++){
+        if(str[i]!=str[l-i-1]){
             istrue=0;
-            break;
+               break;
         }
+       
+        }
+        if(istrue==1){
+          found=1;
+          break;
+        }
+           l--;
+       
     }
-  if(istrue==0){
-    printf("not a palindrome");
-  }else{
+  if(found){
     printf("palindrome");
+  }else{
+    printf("no palindrome possible");
   }
    return 0; 
 }
