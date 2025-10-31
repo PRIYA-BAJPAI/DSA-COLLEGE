@@ -30,3 +30,4 @@ int main(){
     int result=palindrome(arr,n,i);
     printf("%d",result);
 }
+//check it
